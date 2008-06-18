@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project
+  name="dita_dxp"
+  default="deploy-plugins"
+  basedir=".">
+
+  <import
+    file="local.properties.xml"
+    optional="true"/>
+
+
+
+  <!-- dita.dir should point to the toolkit's root directory -->
+  <property
+    name="dist"
+    value="${basedir}/dist"/>
+  <property
+    name="xslt.parser"
+    value="SAXON"/>
+  <property
+    name="build"
+    location="${basedir}/build"/>
+  <property
+    name="lib"
+    location="${basedir}/java/lib"/>
+  <property
+    name="dita-ot-dir"
+    location="c:\DITA-OT1.4.2"/>
+
+  <property
+    name="plugins.src"
+    location="${basedir}/plugins"/>
+  <property
+    name="plugins.basename"
+    value="org.ditadxp"/>
+  <property
+    name="plugins.doctypes.name"
+    value="${plugins.basename}.doctypes"/>
+
+  <property
+    name="plugins.dist"
+    location="${dist}/plugins"/>
+  <property
+    name="plugins.deploy"
+    location="${dita-ot-dir}/plugins"/>
+
+  <import
+    file="${dita-ot-dir}${file.separator}integrator.xml"
+    optional="yes"/>
+
+  <path
+    id="xerces_classpath">
+    <pathelement
+      location="${lib}/xml-apis.jar"/>
+    <pathelement
+      location="${lib}/xalan.jar"/>
+    <pathelement
+      location="${lib}/xercesImpl.jar"/>
+  </path>
+
+  <path
+    id="saxon_classpath">
+    <pathelement
+      location="${lib}/xml-apis.jar"/>
+    <pathelement
+      location="${lib}/saxon9.jar"/>
+    <pathelement
+      location="${lib}/xercesImpl.jar"/>
+  </path>
+
+  <target
+    name="dist-init">
+    <delete
+      includeEmptyDirs="true"
+      dir="${dist}"/>
+    <mkdir
+      dir="${dist}"/>
+  </target>
+
+  <target
+    name="dist-plugins"
+    description="Create working distribution image for the Open Toolkit plugins">
+    <delete
+      failonerror="false">
+      <fileset
+        dir="${plugins.dist}"/>
+    </delete>
+    <mkdir
+      dir="${plugins.dist}"/>
+    <copy
+      todir="${plugins.dist}">
+      <fileset
+        dir="${plugins.src}">
+        <include
+          name="${plugins.doctypes.name}/**"/>
+      </fileset>
+    </copy>
+    <copy
+      todir="${plugins.dist}/${plugins.doctypes.name}/dtd">
+      <fileset
+        dir="${doctypes}">
+        <exclude
+          name="**/dita_1.2/**"/>
+      </fileset>
+    </copy>
+  </target>
+
+  <target
+    name="deploy-plugins"
+    depends="dist-plugins"
+    description="Deploy the DITA DXP-specific plugins to the local Toolkit installation">
+    <!-- FIXME: Need to check for existence of Toolkit before doing the deployment -->
+    <delete
+      failonerror="false">
+      <fileset
+        dir="${plugins.deploy}">
+        <include
+          name="${plugins.basename}.*/**"/>
+      </fileset>
+    </delete>
+    <copy
+      todir="${plugins.deploy}">
+      <fileset
+        dir="${plugins.dist}">
+        <include
+          name="*/**"/>
+      </fileset>
+    </copy>
+
+    <!-- Itegrate the deployed plugins: -->
+    <antcall
+      target="integrate"/>
+
+  </target>
+
+
+  <target
+    name="dist"
+    description="Create a distribution package"
+    depends="dist-init,  dist-plugins"/>
+
+</project>

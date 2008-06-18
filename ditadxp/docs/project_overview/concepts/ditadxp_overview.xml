@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE concept PUBLIC "-//OASIS//DTD DITA Concept//EN" "http://docs.oasis-open.org/dita/v1.1/OS/dtd/concept.dtd">
+<concept
+  id="conceptId">
+  <title>DITA Exchange Package (DXP) Project Overview</title>
+  <prolog>
+  </prolog>
+  <conbody>
+    <p>Manifest content:<ul>
+        <li>One or more top-level maps</li>
+        <li>Topics</li>
+        <li>Non-DITA content (graphics)</li>
+        <li>Rendered output</li>
+        <li>Indexes (where-used, key lists, etc.)</li>
+        <li>Plugins</li>
+      </ul></p>
+    <p>Packaging options:<ul>
+        <li>Build indexes</li>
+        <li>Include peers</li>
+        <li>Rewrite local URIs</li>
+        <li>Rewrite peer URIs</li>
+        <li>Package all maps in directory</li>
+        <li>Package single map</li>
+        <li>Filter package contents</li>
+        <li>Include plugins</li>
+        <li>Include rendered content</li>
+      </ul></p>
+  </conbody>
+</concept>
