@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dxp_package_manifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="../dita_dxp_manifest.xsd">
+  <dxp_manifestmeta>
+    <copyright>
+      <!-- Copyright info for the copyright owner of the package -->
+    </copyright>
+    <dxp_revision_history>
+      <dxp_modification>
+        <dxp_modification_time>2009-01-01 06:23:34</dxp_modification_time>
+        <dxp_modified_by>mypackagerapp</dxp_modified_by>
+        <dxp_modification_message>Created</dxp_modification_message>
+      </dxp_modification>
+      <dxp_modification>
+        <dxp_modification_time>2009-01-02 07:23:34</dxp_modification_time>
+        <dxp_modified_by>ekimber</dxp_modified_by>
+        <dxp_modification_message>Updated concept_001.xml</dxp_modification_message>
+      </dxp_modification>
+      <dxp_modification>
+        <dxp_modification_time>2009-01-03 08:23:34</dxp_modification_time>
+        <dxp_modified_by>DITA OT 1.5</dxp_modified_by>
+        <dxp_modification_message>Generated XHTML output</dxp_modification_message>
+      </dxp_modification>
+    </dxp_revision_history>
+  </dxp_manifestmeta>
+  <primary_materials>
+    <directory>
+      <navtitle>mypublication</navtitle>
+      <topicref href="root_map_1.ditamap" format="ditamap">
+        <navtitle>root_map_1.ditamap</navtitle>
+      </topicref>
+      <directory>
+        <navtitle>concepts</navtitle>
+        <topicref href="concept_001.xml"/>
+        <topicref href="concept_002.xml"/>
+      </directory>
+      <directory>
+        <navtitle>graphics</navtitle>
+        <topicref href="fig_00001.jpg" format="jpeg"/>
+        <topicref href="fig_00002.jpg" format="jpeg"/>
+      </directory>
+      <directory>
+        <navtitle>reference</navtitle>
+        <directory>
+          <navtitle>A</navtitle>
+          <topicref href="thing_desc_001.xml"/>
+          <topicref href="thing_desc_002.xml"/>
+        </directory>
+        <directory>
+          <navtitle>B</navtitle>
+          <topicref href="thing_desc_003.xml"/>
+          <topicref href="thing_desc_004.xml"/>
+        </directory>
+      </directory>
+      <directory>
+        <navtitle>tasks</navtitle>
+        <topicref href="task_001.xml"/>
+        <topicref href="task_002.xml"/>
+      </directory>
+    </directory>
+  </primary_materials>
+  <secondary_materials>
+    <toolkit_plugins>
+      <topicref href="plugins/my_shells_and_specializations" format="directory"/>
+    </toolkit_plugins>
+    <renditions>
+      
+    </renditions>
+    <indexes>
+      <dxp_index>
+        <title>Where-Used</title>
+        <dxp_index_table>
+          <dxp_index_entry>
+            <dxp_index_key>concepts/concept_001.xml</dxp_index_key>
+            <dxp_index_value>
+              <dxp_index_value_ref href="root_map_01.ditamap"/>
+            </dxp_index_value>
+          </dxp_index_entry>
+        </dxp_index_table>
+      </dxp_index>
+    </indexes>
+    <application-specific>
+      
+    </application-specific>
+  </secondary_materials>
+</dxp_package_manifest>

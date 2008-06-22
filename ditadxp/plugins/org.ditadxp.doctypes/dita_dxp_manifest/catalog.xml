@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog"          
+  prefer="public">
+  
+  <!-- URI of latest version of the schema: -->
+  <system systemId="urn:ditadxp.org:names:dita:xsd:dita_dxp_manifest.xsd"      uri="dita_dxp_manifest.xsd"/>
+  <uri name="urn:ditadxp.org:names:dita:xsd:dita_dxp_manifest.xsd"             uri="dita_dxp_manifest.xsd"/>
+  
+  <!-- URIs of time-specific versions of the schema: -->
+  <system systemId="urn:ditadxp.org:names:dita:xsd:dita_dxp_manifest.xsd:1.0"      uri="dita_dxp_manifest.xsd"/>
+  <uri name="urn:ditadxp.org:names:dita:xsd:dita_dxp_manifest.xsd:1.0"             uri="dita_dxp_manifest.xsd"/>
+  
+</catalog>
