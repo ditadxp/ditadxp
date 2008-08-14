@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <project
-  name="dita_dxp"
+  name="ditadxp"
   default="deploy-plugins"
   basedir=".">
 
