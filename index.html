@@ -4,11 +4,11 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Ditadxp : The DITA Interchange Package (DXP) is used to create single-file (Zip-based) packages of DITA-based resources and their dependencies for ease of interchange and management. A DXP package uses a specialized DITA map to define the package manifest.">
+    <meta name="description" content="DITADXP : The DITA Interchange Package (DXP) is used to create single-file (Zip-based) packages of DITA-based resources and their dependencies for ease of interchange and management. A DXP package uses a specialized DITA map to define the package manifest.">
 
     <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
 
-    <title>Ditadxp</title>
+    <title>DITA Interchange Package (DXP)</title>
   </head>
 
   <body>
@@ -18,7 +18,7 @@
         <header class="inner">
           <a id="forkme_banner" href="https://github.com/ditadxp/ditadxp">View on GitHub</a>
 
-          <h1 id="project_title">Ditadxp</h1>
+          <h1 id="project_title">DITADXP</h1>
           <h2 id="project_tagline">The DITA Interchange Package (DXP) is used to create single-file (Zip-based) packages of DITA-based resources and their dependencies for ease of interchange and management. A DXP package uses a specialized DITA map to define the package manifest.</h2>
 
             <section id="downloads">
@@ -31,44 +31,234 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h3>
-<a name="welcome-to-github-pages" class="anchor" href="#welcome-to-github-pages"><span class="octicon octicon-link"></span></a>Welcome to GitHub Pages.</h3>
-
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
-
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
-
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
-
-<h3>
-<a name="designer-templates" class="anchor" href="#designer-templates"><span class="octicon octicon-link"></span></a>Designer Templates</h3>
-
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
-
-<h3>
-<a name="rather-drive-stick" class="anchor" href="#rather-drive-stick"><span class="octicon octicon-link"></span></a>Rather Drive Stick?</h3>
-
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
-
-<h3>
-<a name="authors-and-contributors" class="anchor" href="#authors-and-contributors"><span class="octicon octicon-link"></span></a>Authors and Contributors</h3>
-
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
-
-<h3>
-<a name="support-or-contact" class="anchor" href="#support-or-contact"><span class="octicon octicon-link"></span></a>Support or Contact</h3>
-
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
+  <h1>DITA Exchange Package (DXP) Project</h1>
+  <div>
+  <p>The DITA Exchange Package (DXP) project is an effort to define a ZIP-based
+packaging mechanism for DITA content. The general requirement is to be able to
+package one or more DITA maps and all of their local (and optionally, peer)
+resources into a single storage object that can be easily interchanged with other
+users, systems, processors, or used directly for editing.</p>
+<p>The intent of the project is to define the simplest possible mechanism that
+satisfies the documented requirements. If the DXP mechanism gets acceptance and
+is proven useful, the intent of this project is to submit the design for standardization
+by the appropriate standards body (presumably OASIS Open).</p>
+<p>The SourceForge project page is here: 
+<a href="http://www.sourceforge.net/projects/ditadxp">www.sourceforge.net/projects/ditadxp</a>.</p>
+<p>DITA DXP is a community project and participation of all interested parties is encouraged and
+actively solicitied. The project is interested in input and participation from all DITA-aware
+product vendors, expecially providers of editors and content management systems.</p>
+<p>Because DXP packages are ZIP files, they can be packed and unpacked using any ZIP-aware
+processor. As of July 2008, version 9.3 the OxygenXML editor product (<a href="http://www.oxygenxml.com">www.oxygenxml.com</a>)
+provides the ability to edit files directly from ZIP files, meaning you can edit directly from 
+a DXP package. We are hopeful that other DITA-aware editor products will add similar features.</p>
+<p>The intended deliverables from this project include:</p>
+<ul>
+<li>A specialization of DITA map for defining package manifests</li>
+<li>A packager utility for creating DXP packages from DITA maps</li>
+<li>An unpacker utility for extracting resources from DXP packages (for example,
+extracting a single map and its dependencies from a package containing several
+maps)</li>
+</ul>
+<p>All project materials are licensed with the same Apache open source license used by the 
+DITA Open Toolkit.</p>
+<p>To particpate in or track DITA DXP's development, please subscribe to the DITA DXP Design Discussion 
+mailing list. This is a public list to which anyone may subscribe. If you would like to participate
+more directly as a developer, please send email to the project administrator (via the Project's
+main page) and provide your SourceForge user ID.</p>
+  <div>
+   <h2><a name="use-cases"/>DITA DXP Use Cases</h2>
+   <p>DITA DXP packages are intended to support the following use cases:</p>
+<ul>
+<li>Convenient interchange of one or more maps and all local dependencies, such as between
+the authoring enterprise and a localization supplier</p>
+<li>Storage-conserving local storage of DITA resources for local editing and processing (e.g., treating
+a DITA map and its dependent topics as a single "document" the Microsoft Office 2007 .docx format)</li>
+<li>Archiving of DITA resources</li>
+<li>Export of maps and dependencies from content management systems in a way that enables re-import with
+CMS-specific metadata maintained (for example, to support off-line editing of DITA resources without
+loss of context and with minimal local storage costs, as opposed to using something like CVS/Subversion-style
+local working copies)</li>
+<li>Create a package that reflects the application of a particular filter specification to the source
+content (for example, creating a package that omits all internal-use-only content or only includes
+content for a specific product version or operating system).</li>
+</ul>
+  </div>
+  <div>
+    <h2><a name="dxp-design"/>Basic DXP Design</h2>
+    <p>A DXP package is a ZIP file that has exactly one root directory containing
+either exactly one DITA map or a DXP manifest map named "dita_dxp_manifest.ditamap".
+A package with no manifest map is said to have an "implicit manifest" constructed by
+starting with the root map and determining all DITA-defined dependencies directly or
+indirectly referenced from the map by DITA-defined referencing mechanisms as well
+as by applying other rules as defined in this specification (e.g., including
+secondary materials as described below).</p>
+    <p>A DXP package contains the source resources used by one or more DITA maps
+(where the only map in the package may be the package manifest in the case where the
+intent is to interchange only topics and their dependencies).</p>
+    <p>A DXP package may also contain any of the following supporting and secondary materials:</p>
+<ul>
+<li>DITA Open Toolkit plugins containing any local shells or specialization declaration
+sets required by the content</li>
+<li>DITA Open Toolkit plugins containing processors or extentions required by the 
+package content.</li>
+<li>Generated output produced from the package content (e.g., HTML, PDFs, etc.).</li>
+<li>Indexes of the packaged content. 
+<p>[NOTE: Indexes as described here may be a feature whose complexity outweighs its value. 
+I have included
+it here in order to capture the design ideas and let the community decide if indexes
+are worth the cost.]<p>
+<p>Indexes may include:</p>
+<ul>
+<li>Where-used, which relates elements to the elements that link to those elements</li>
+<li>Keyword, which relates unique keyword values to topics that contain the keyword</li>
+<li>Metadata, which relates unique metadata element values to topics and maps that
+exhibit those values</li>
+<li>Class, which relates unique class values to elements that elements of that class</li>
+</ul>
+<p>Indexes are represented by a specialization of simple table. Packagers may
+generate any indexes of any sort. Indexes are a convenience for consumers of 
+packages. Because full-featured DXP packagers must process all the members of a package,
+it should be relatively easy for such packagers to also build indexes as part of the
+processing package. Likewise, DITA-aware CMS systems will often maintain these 
+types of indexes as part of their core functionality.</p>
+<p>Processors that modify packages must flag indexes as being "out of date" if the DITA
+content within the package is modified without updating the indexes involved. For example,
+an editor that allows editing directly from a package is not obligated to keep any
+indexes up to date, but it is obligated to mark any indexes it doesn't update as
+"out of date".
+</li>
+<li>Application-specific artifacts, such as editor-specific configurations (style
+sheets, macros, plug-ins, etc.) needed to process or otherewise act on the content.</li>
+</ul>
+    <p>In packages with implicit manifests, all secondary and
+supporting materials must be in a top-level directory named "~secondary_materials".
+In packages with explicit manifests, secondary materials may be organized in any
+way but must be listed in the "secondary materials" section of the manifest.</p> 
+    <p>Consumers of packages are not required to use secondary and supporting
+materials in any way but must not reject otherwise valid packages that contain them.</p>
+    <p>DXP maps must conform to the DXP Manifest Map specialization. However, to enable
+generic processing of maps without reference to DTDs or schemas, manifest maps must
+make all <code>class=</code> attributes explicit. DXP manifest maps must include
+a <code>noNamespaceSchemaLocation=</code> attribute that uses the absolute URI
+for the DXP Manifest Map schema but processors are not required
+to resolve the schema, although they may choose to validate manifests if desired.</p> 
+    <p>A DXP package should contain exactly the set of maps and local dependencies
+directly or indirectly referenced from the top-level maps in the package. That is,
+a package should not contain any "orphan" storage objects. For packages with
+manifests, this means that the manifest must point to all the package members.
+For packages without manifests, it means that the package must contain only members
+pointed to by at least one other member of the package.</p>
+    <p>The intent of this constraint is to enable validation of package contents
+by receivers of packages to ensure that the package contents are consistent, in
+particular, to ensure that all required dependencies are present.</p>
+    <p>Of course, for informal use, packages that contain members that are not
+referenced should not cause processors to fail. However, consumers of packages
+are free to impose the requirement that the contents of a package exactly match
+the explicit or implicit manifest. Consumers may also require that
+packages have explicit manifests (which simplifies validation of package
+contents by avoiding the need to process all the package members to determine
+the effective bounded object set in order to then compare the set of members
+in the package to the bounded object set defined by the links in the members).</p>
+<p>If a package contains members required by non-DITA (foreign or unknown) content
+there must be an explicit manifest and the manifest must indicate that
+such dependencies are non-DITA-defined. For example, a DITA topic that includes
+an inline SVG graphic that in turn links to a bitmap has a non-DITA-defined
+dependency on that bitmap (assuming the bitmap is not linked by DITA-defined 
+elements). An SVG-aware packager should include the bitmap but
+must create a manifest and must indicate that the bitmap is included
+because of a non-DITA-defined reference. In this case, a package
+validator that only looked at DITA-defined depencencies would flag the
+bitmap graphic as being "orphaned" and report the package as being
+invalid if there was no manifest. Essentially, by listing the bitmap
+in the manifest, it becomes a DITA-defined dependency (because the
+manifest is itself a DITA map).</p>
+  <p>A manifest map is a DITA map with specialized metadata used to 
+describe the package. The manifest contains topicrefs that point
+to each member of the package and topic heads that reflect the
+storage (directory) structure of the package members, such that the
+map can be treated as an exact view of the directories in the ZIP
+package (this allows accurate navigation of the package via the
+manifest map alone and also facilitates validation of the package
+against the map by simple inspection).</p>
+<p>A manifest may also include topicrefs to topics that are not
+root topics of storage objects. This allows the manifest to impose
+metadata onto any topic. It also allows the manifest to act as
+an access navigation map to topics regardless of their physical
+storage organization (for example, to reflect views provided
+by CMS systems that treat each topic as an object for management
+purposes). These references are optional and are clearly distinguished
+in the manifest map by a distinct element type name.</p>
+<p>Each topichead and topic reference may include application-specific
+metadata that is, by definition, imposed on the referenced resource.
+For example, editors can use this metadata to capture editing state,
+options applied to files, etc. or CMS systems can capture things
+like CMS-specific object IDs, CMS-specific metadata, and so on.
+This metadata must be maintained by processors that manipulate
+packages directly (e.g., editors that allow editing directly from
+DXP packages and provide the service of keeping the manifest up to
+date).</p>
+ <p>The manifest may distinguish top-level maps (maps intended
+to the input to processors) from maps that are subordinate maps intended
+to only be used from other maps (and should do so whenever possible).</p>
+  </div>
+  <div>
+   <h2><a name="packaging-issues"/>DITA Packaging Issues</h2>
+   <p>Taking a top-level map and packaging it such that the package contains only the local or local and 
+peer dependencies requires processing the map and all topics in order to find all references in order
+to then construct the set of unique storage objects referenced (the "bounded object set" determined
+by the initial map chosen as the root map).</p>
+<p>(Note that external dependencies [e.g., Web sites, PDF documents, etc.] must become
+local or peer resources in order to be packaged. That is, an external dependency  would
+have to become a local or peer dependency simply to be contained in the same ZIP file as the
+topics or maps that use it and all pointers to it would have to be rewritten to point
+to the dependency as packaged.)</p>
+  <p>If all the members of the bounded object are under a common root directory and that root directory
+contains exactly one map and the map points directly or indirectly to all other resources below
+the root directory then all that is 
+required to construct a package is to ZIP it up, the result being a DXP package with an implicit 
+manifest.</p>
+<p>If there is more than one map in the root or the set of resources used does not
+exactly match the resources in the directory tree below the root, then a packager must
+determine the bounded object set (BOS) of resources used directly or indirectly
+by the top-level maps to be packaged, write a manifest map in the common root directory reflecting the BOS 
+members, and then ZIP up the manifest and BOS members. Assuming that all references to local (and
+optionally, peer) resources are via relative paths, there is no need to modify the packaged
+resources as all references will still be correct in the context of the package itself.</p>
+  <p>However, if the BOS members are not under a common root  or if any
+local (or, if packaged, peer) resources use absolute URLs or relative URLs that point outside
+the scope of the root directory, then the maps and topics as packaged will need to have some or all of their pointers
+(topicrefs, xrefs, image references, etc.) rewritten to reflect the locations of the targets as 
+zipped. This means that a full-featured DXP packager must include a processor that both understands
+how to process and resolve all DITA-defined links and can rewrite documents such that only
+the values of pointers are changed. This type of processor is non-trivial but not that difficult
+to implement using either Java (e.g., as a SAX or DOM application) or using XSLT 2 (which standardizes
+both the ability to define functions, needed to make address processing tractible, and the
+ability to create arbitrary result documents).</p
+ <p>In the simplest case, a DXP package is simply a ZIP file containing exactly one DITA map in the 
+root and all local (and optionally, peer) dependencies located with or below the root map. In this
+case there is no need for a manifest, meaning that a valid DXP package can be created by simply
+zipping up a directory containing a single map where all dependencies are in decendent directories.</p>
+<p>If the package needs to contain two or more top-level maps, it must have a manifest map that 
+lists at least the top-level maps and, optionally, all the storage objects in the map. (Note: some
+interchange partners may require the use of fully-populated manifests in order to do validation 
+of package contents upon receipt. Likewise, some packager applications may use manifest maps
+in order to know what storage objects to package).</p>
+<p>Note that processing maps and topics in order to construct a manifest map is much easier
+task than doing pointer rewriting. Creating manifeset maps can be done with relatively
+simple XSLT transforms and (slightly less simple) XQuery programs).</p>
+<p>For content managed by DITA-aware content management systems, it would be the job of the
+CMS to construct the package and its manifest based on input from the package requestor.
+The details of how the package is organized would be determined by the CMS system, the
+options it provides to users, and how it organizes resources internally.</p>
+  </div>
+  </div>
       </section>
     </div>
 
     <!-- FOOTER  -->
     <div id="footer_wrap" class="outer">
       <footer class="inner">
-        <p class="copyright">Ditadxp maintained by <a href="https://github.com/ditadxp">ditadxp</a></p>
+        <p class="copyright">DITADXP maintained by <a href="https://github.com/ditadxp">ditadxp</a></p>
         <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
       </footer>
     </div>
