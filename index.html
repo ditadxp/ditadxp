@@ -31,9 +31,9 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-  <h1>DITA Exchange Package (DXP) Project</h1>
+  <h1>DITA Interchange Package (DXP) Project</h1>
   <div>
-  <p>The DITA Exchange Package (DXP) project is an effort to define a ZIP-based
+  <p>The DITA Interchange Package (DXP) project is an effort to define a ZIP-based
 packaging mechanism for DITA content. The general requirement is to be able to
 package one or more DITA maps and all of their local (and optionally, peer)
 resources into a single storage object that can be easily interchanged with other
@@ -42,8 +42,8 @@ users, systems, processors, or used directly for editing.</p>
 satisfies the documented requirements. If the DXP mechanism gets acceptance and
 is proven useful, the intent of this project is to submit the design for standardization
 by the appropriate standards body (presumably OASIS Open).</p>
-<p>The SourceForge project page is here: 
-<a href="http://www.sourceforge.net/projects/ditadxp">www.sourceforge.net/projects/ditadxp</a>.</p>
+<p>The GitHub project page is here: 
+<a href="http://www.github.com/ditadxp/ditadxp">www.github.com/ditadxp/ditadxp</a>.</p>
 <p>DITA DXP is a community project and participation of all interested parties is encouraged and
 actively solicitied. The project is interested in input and participation from all DITA-aware
 product vendors, expecially providers of editors and content management systems.</p>
@@ -65,8 +65,8 @@ DITA Open Toolkit.</p>
 mailing list. This is a public list to which anyone may subscribe. If you would like to participate
 more directly as a developer, please send email to the project administrator (via the Project's
 main page) and provide your SourceForge user ID.</p>
-  <div>
-   <h2><a name="use-cases"/>DITA DXP Use Cases</h2>
+  <div id="use-cases">
+   <h2>DITA DXP Use Cases</h2>
    <p>DITA DXP packages are intended to support the following use cases:</p>
 <ul>
 <li>Convenient interchange of one or more maps and all local dependencies, such as between
@@ -83,8 +83,8 @@ content (for example, creating a package that omits all internal-use-only conten
 content for a specific product version or operating system).</li>
 </ul>
   </div>
-  <div>
-    <h2><a name="dxp-design"/>Basic DXP Design</h2>
+  <div id="dxp-design">
+    <h2>Basic DXP Design</h2>
     <p>A DXP package is a ZIP file that has exactly one root directory containing
 either exactly one DITA map or a DXP manifest map named "dita_dxp_manifest.ditamap".
 A package with no manifest map is said to have an "implicit manifest" constructed by
@@ -201,8 +201,8 @@ date).</p>
 to the input to processors) from maps that are subordinate maps intended
 to only be used from other maps (and should do so whenever possible).</p>
   </div>
-  <div>
-   <h2><a name="packaging-issues"/>DITA Packaging Issues</h2>
+  <div id="packaging-issues">
+   <h2>DITA Packaging Issues</h2>
    <p>Taking a top-level map and packaging it such that the package contains only the local or local and 
 peer dependencies requires processing the map and all topics in order to find all references in order
 to then construct the set of unique storage objects referenced (the "bounded object set" determined
